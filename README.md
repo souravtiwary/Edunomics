@@ -3,5 +3,5 @@ Andriod Studio v4.0.0
 minSdkVersion 26
 targetSdkVersion 29
 
-Search is not an auto complete search because database was not available to suggestion
+Login Using Firebase us added and contains feature like reset password, forget password, delete account etc.
 This is just a protoytpe
