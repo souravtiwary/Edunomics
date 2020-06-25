@@ -6,6 +6,7 @@ import androidx.cardview.widget.CardView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -18,12 +19,14 @@ public class MainActivity extends AppCompatActivity {
     CardView alpha;
     CardView opportunity;
     CardView social;
+    ImageButton user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        user = findViewById(R.id.userimage);
         search = findViewById(R.id.search);
         impact = findViewById(R.id.impact);
         intiative = findViewById(R.id.intiative);
@@ -32,6 +35,13 @@ public class MainActivity extends AppCompatActivity {
         alpha = findViewById(R.id.alpha);
         social = findViewById(R.id.social);
         opportunity = findViewById(R.id.opportunity);
+
+        user.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, UserActivity.class));
+            }
+        });
 
         social.setOnClickListener(new View.OnClickListener() {
             @Override
